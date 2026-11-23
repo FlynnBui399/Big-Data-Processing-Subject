@@ -1,6 +1,6 @@
 target/
 output/
-/Group_lab1/logs/*.log
+/logs/*.log
 __pycache__/
 .classpath
 .project

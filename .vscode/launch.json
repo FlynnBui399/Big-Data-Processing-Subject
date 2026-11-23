@@ -3,21 +3,30 @@
     "configurations": [
         {
             "type": "java",
-            "name": "FriendCount",
+            "name": "Task 2 - FriendCount",
             "request": "launch",
-            "projectName": "hadoop",
+            "projectName": "hadoop-mapreduce-lab01",
             "mainClass": "de.tud.stg.FriendCount",
-            "cwd": "${workspaceFolder}/Hadoop MapReduce - Lab01/hadoop",
-            "args": ["input/friendcount", "output/friendcount"]
+            "cwd": "${workspaceFolder}/Hadoop MapReduce - Lab01",
+            "args": ["input/friendcount", "output/run01/friendcount"]
+        },
+        {
+            "type": "java",
+            "name": "Task 3 - WordLength",
+            "request": "launch",
+            "projectName": "hadoop-mapreduce-lab01",
+            "mainClass": "de.tud.stg.WordLength",
+            "cwd": "${workspaceFolder}/Hadoop MapReduce - Lab01",
+            "args": ["input/wordlength", "output/run01/wordlength"]
         },
         {
             "type": "java",
             "name": "Task 4 - Inverted Index",
             "request": "launch",
-            "projectName": "task4-invertedindex",
+            "projectName": "hadoop-mapreduce-lab01",
             "mainClass": "de.tud.stg.Comprehension",
-            "cwd": "${workspaceFolder}/Hadoop MapReduce - Lab01/Task4",
-            "args": ["input/invertedindex", "output/comprehension-vscode"]
+            "cwd": "${workspaceFolder}/Hadoop MapReduce - Lab01",
+            "args": ["input/invertedindex", "output/run01/invertedindex"]
         }
     ]
 }

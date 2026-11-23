@@ -1,23 +1,44 @@
 # Hadoop MapReduce - Lab01
 
-| Maven project | Hadoop | MapReduce jobs |
-| --- | --- | --- |
-| [Group_lab1](Group_lab1/) | 3.5.0 | `FriendCount`, `WordLength`, `InvertedIndex` |
-| [hadoop](hadoop/) | 2.7.2 | `WordCount`, `Comprehension`, `FriendCount`, `WordLength`, `InvertedIndex` |
-| [Task4](Task4/) | 2.7.2 | `Comprehension` — Task 4 inverted index |
+One Maven project contains the three lab tasks in package `de.tud.stg`.
 
-Each project has its own `pom.xml`, Java source, and sample inputs. Build them separately with JDK 17 and Maven 3.9 or newer.
+| Task | Java file | Original source | Input |
+| --- | --- | --- | --- |
+| 2 — Friend count | `src/main/java/de/tud/stg/FriendCount.java` | `hadoop/hadoop` | `input/friendcount` |
+| 3 — Word length | `src/main/java/de/tud/stg/WordLength.java` | `Group_lab1/MapReduce_Eclipse` | `input/wordlength` |
+| 4 — Inverted index | `src/main/java/de/tud/stg/Comprehension.java` | `source_code_Task4/hadoop` | `input/invertedindex` |
 
-Run these commands from the repository root.
+Each Java file is copied byte for byte from its original source. The shared Maven configuration uses JDK 17 and Hadoop 3.5.0 from the group project.
+
+## Build and run
+
+From the repository root, build with Maven 3.9 or newer.
 
 ```sh
-mvn -f "Hadoop MapReduce - Lab01/Group_lab1/pom.xml" package
-mvn -f "Hadoop MapReduce - Lab01/hadoop/pom.xml" package
-mvn -f "Hadoop MapReduce - Lab01/Task4/pom.xml" package
+mvn -f "Hadoop MapReduce - Lab01/pom.xml" package
 ```
 
-The [group project guide](Group_lab1/README.md) covers the Eclipse configurations and the six sample cases. For the `hadoop` examples, launch the chosen class with its input and a fresh output path, relative to the `hadoop` project directory. The supplied inputs are `input/wordcount` for `WordCount` and `Comprehension`, and `input/friendcount`, `input/wordlength`, and `input/invertedindex` for the other three jobs respectively.
+In VS Code, open the repository root, let the Java extensions import the Maven project, and select **Task 2 - FriendCount**, **Task 3 - WordLength**, or **Task 4 - Inverted Index** in **Run and Debug**.
 
-The [Task 4 guide](Task4/README.md) covers the separately supplied inverted-index implementation and its `file01.txt` / `file02.txt` fixtures.
+In Eclipse, import this folder with **Maven > Existing Maven Projects** and keep the project name `hadoop-mapreduce-lab01`. Use JDK 17 and run the corresponding configuration in `launches/`.
 
-To run `hadoop`'s `FriendCount` in VS Code, open the repository root, let the Java extensions import the Maven projects, and select **FriendCount** in **Run and Debug**. The launch writes to `hadoop/output/friendcount` under this lab folder. Use a fresh output path for each run. On Windows, configure `HADOOP_HOME` and add its `bin` directory to `PATH` before launching the IDE.
+Each launch uses this lab folder as its working directory and writes to `output/run01/<case>`. On Windows, configure `HADOOP_HOME` and add its `bin` directory to `PATH` before starting the IDE. Use a fresh output path when running again.
+
+## Verify results
+
+Task 2 produces Jim 3, Joe 1, Kai 1, Lin 2, and Sue 1. Task 3 produces tiny 4, small 6, medium 5, and big 5. Task 4 produces the following filename occurrences, whose order within a row may vary.
+
+| Word | Filenames |
+| --- | --- |
+| Bye | file01.txt |
+| Goodbye | file02.txt |
+| Hadoop | file02.txt,file02.txt |
+| Hello | file01.txt,file02.txt |
+| World | file01.txt,file01.txt |
+
+Additional Task 3 fixtures are in `input/wordlength10`, `input/boundaries`, and `input/separators`. Run `WordLength` with each input and the corresponding `output/run01/<case>` path. After all six cases finish, run the existing verifier from this lab folder.
+
+```sh
+python scripts/verify_results.py output/run01
+python scripts/test_verifier.py
+```

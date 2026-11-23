@@ -4,9 +4,9 @@
  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.tud.stg</groupId>
-  <artifactId>team-mapreduce</artifactId>
+  <artifactId>hadoop-mapreduce-lab01</artifactId>
   <version>1.0.0</version>
-  <name>Exercise 2 - Team MapReduce - Dinh Khuong</name>
+  <name>Hadoop MapReduce - Lab01</name>
   <properties>
     <maven.compiler.release>17</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

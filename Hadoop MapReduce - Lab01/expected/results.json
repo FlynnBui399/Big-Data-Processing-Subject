@@ -5,10 +5,10 @@
   "boundaries": {"tiny": 1, "small": 2, "medium": 2, "big": 2},
   "separators": {"tiny": 1, "small": 1, "medium": 1, "big": 1},
   "invertedindex": {
-    "Bye": ["file1.txt"],
-    "Goodbye": ["file2.txt"],
-    "Hadoop": ["file2.txt", "file2.txt"],
-    "Hello": ["file1.txt", "file2.txt"],
-    "World": ["file1.txt", "file1.txt"]
+    "Bye": ["file01.txt"],
+    "Goodbye": ["file02.txt"],
+    "Hadoop": ["file02.txt", "file02.txt"],
+    "Hello": ["file01.txt", "file02.txt"],
+    "World": ["file01.txt", "file01.txt"]
   }
 }
