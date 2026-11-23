@@ -1,0 +1,6 @@
+a I x
+an cat four to word
+apple Hadoop elephant algorithm
+abcdefghij MapReduceX abcdefghijk distributed
+
+a,an;apple.abcdefghij

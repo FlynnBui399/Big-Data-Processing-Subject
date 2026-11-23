@@ -1,0 +1,14 @@
+{
+  "friendcount": {"Jim": 3, "Joe": 1, "Kai": 1, "Lin": 2, "Sue": 1},
+  "wordlength": {"tiny": 4, "small": 6, "medium": 5, "big": 5},
+  "wordlength10": {"big": 1},
+  "boundaries": {"tiny": 1, "small": 2, "medium": 2, "big": 2},
+  "separators": {"tiny": 1, "small": 1, "medium": 1, "big": 1},
+  "invertedindex": {
+    "Bye": ["file1.txt"],
+    "Goodbye": ["file2.txt"],
+    "Hadoop": ["file2.txt", "file2.txt"],
+    "Hello": ["file1.txt", "file2.txt"],
+    "World": ["file1.txt", "file1.txt"]
+  }
+}

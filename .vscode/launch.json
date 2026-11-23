@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "FriendCount",
+            "request": "launch",
+            "projectName": "hadoop",
+            "mainClass": "de.tud.stg.FriendCount",
+            "cwd": "${workspaceFolder}/Hadoop MapReduce - Lab01/hadoop",
+            "args": ["input/friendcount", "output/friendcount"]
+        }
+    ]
+}
