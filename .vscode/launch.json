@@ -9,6 +9,15 @@
             "mainClass": "de.tud.stg.FriendCount",
             "cwd": "${workspaceFolder}/Hadoop MapReduce - Lab01/hadoop",
             "args": ["input/friendcount", "output/friendcount"]
+        },
+        {
+            "type": "java",
+            "name": "Task 4 - Inverted Index",
+            "request": "launch",
+            "projectName": "task4-invertedindex",
+            "mainClass": "de.tud.stg.Comprehension",
+            "cwd": "${workspaceFolder}/Hadoop MapReduce - Lab01/Task4",
+            "args": ["input/invertedindex", "output/comprehension-vscode"]
         }
     ]
 }
